@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Acción San Luis 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px; text-align: center; border-radius: 20px 20px 0 0; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .nav-tabs { display: flex; background: #f8f9fa; border-bottom: 3px solid #e9ecef; overflow-x: auto; }
+        .nav-tab { padding: 15px 30px; cursor: pointer; border: none; background: transparent; font-size: 1em; font-weight: 600; color: #666; white-space: nowrap; }
+        .nav-tab:hover { background: #e9ecef; }
+        .nav-tab.active { background: white; color: #2a5298; border-bottom: 3px solid #2a5298; margin-bottom: -3px; }
+        .content { padding: 40px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0; }
+        .team-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .team-card h3 { font-size: 1.3em; margin-bottom: 10px; }
+        .action-card { background: #f8f9fa; border-left: 5px solid #2a5298; padding: 25px; margin-bottom: 25px; border-radius: 10px; }
+        .action-title { font-size: 1.4em; color: #2a5298; font-weight: 700; margin-bottom: 15px; }
+        .budget { color: #28a745; font-size: 1.3em; font-weight: 700; }
+        .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; background: white; padding: 20px; border-radius: 8px; }
+        .detail-item { display: flex; flex-direction: column; }
+        .detail-label { font-size: 0.8em; color: #666; text-transform: uppercase; font-weight: 600; margin-bottom: 5px; }
+        .detail-value { font-size: 1.1em; color: #333; font-weight: 600; }
+        .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .kpi-card { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .kpi-value { font-size: 2.5em; font-weight: 700; margin: 10px 0; }
+        .stage-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; border-radius: 10px; margin: 30px 0 20px 0; font-size: 1.5em; font-weight: 700; }
+        ul.actions-list { margin: 15px 0 15px 25px; line-height: 1.8; }
+        .print-btn { position: fixed; bottom: 30px; right: 30px; background: #2a5298; color: white; border: none; padding: 15px 30px; border-radius: 50px; font-size: 1em; font-weight: 600; cursor: pointer; box-shadow: 0 5px 20px rgba(0,0,0,0.3); z-index: 1000; }
+        .print-btn:hover { transform: translateY(-3px); }
+        @media print { .nav-tabs, .print-btn { display: none; } .tab-content { display: block !important; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Plan de Acción Marketing Digital</h1>
+            <p>San Luis 2026 | Bebidas Saborizadas Sin Azúcar</p>
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('resumen')">📋 Resumen</button>
+            <button class="nav-tab" onclick="showTab('equipo')">👥 Equipo</button>
+            <button class="nav-tab" onclick="showTab('redes')">📱 Redes Sociales</button>
+            <button class="nav-tab" onclick="showTab('web')">🌐 Sitio Web</button>
+            <button class="nav-tab" onclick="showTab('kpis')">📊 KPIs</button>
+            <button class="nav-tab" onclick="showTab('presupuesto')">💰 Presupuesto</button>
+        </div>
+        
+        <div class="content">
+            <!-- RESUMEN -->
+            <div id="resumen" class="tab-content active">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">📋 Resumen Ejecutivo</h2>
+                
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; text-align: center;">
+                    <h3 style="font-size: 1.5em; margin-bottom: 10px;">Inversión Total</h3>
+                    <div style="font-size: 3em; font-weight: 700;">S/ 43,500</div>
+                    <p style="opacity: 0.9;">Enero - Junio 2026</p>
+                </div>
+                
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div>Instagram Engagement</div>
+                        <div class="kpi-value">5%</div>
+                        <small>Meta 2026</small>
+                    </div>
+                    <div class="kpi-card">
+                        <div>TikTok Engagement</div>
+                        <div class="kpi-value">6%</div>
+                        <small>Meta 2026</small>
+                    </div>
+                    <div class="kpi-card">
+                        <div>Facebook Engagement</div>
+                        <div class="kpi-value">3%</div>
+                        <small>Meta 2026</small>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3 style="color: #2a5298; margin-bottom: 15px;">🎯 Distribución de Inversión</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong>Redes Sociales</strong>
+                            <div class="budget">S/ 21,500</div>
+                            <small>50% del presupuesto</small>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong>Sitio Web</strong>
+                            <div class="budget">S/ 21,500</div>
+                            <small>50% del presupuesto</small>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong>Setup Inicial</strong>
+                            <div class="budget">S/ 500</div>
+                            <small>Herramientas</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3 style="color: #2a5298; margin-bottom: 15px;">📊 Metas Principales</h3>
+                    <ul style="line-height: 2; margin-left: 20px;">
+                        <li><strong>3,000 miembros</strong> en Club Burbujas</li>
+                        <li><strong>8,000 suscriptores</strong> al newsletter</li>
+                        <li><strong>5,000 códigos QR</strong> escaneados</li>
+                        <li><strong>15 alianzas</strong> estratégicas activadas</li>
+                        <li><strong>+250% tráfico web</strong> orgánico</li>
+                        <li><strong>100+ piezas UGC</strong> generadas</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- EQUIPO -->
+            <div id="equipo" class="tab-content">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">👥 Equipo y Roles</h2>
+                
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Hugo</h3>
+                        <div style="opacity: 0.9; margin: 10px 0;">🎯 Director de Marketing Digital</div>
+                        <small>• Supervisión general<br>• Aprobación campañas<br>• Análisis ROI<br>• Negociación alianzas</small>
+                    </div>
+                    <div class="team-card">
+                        <h3>George</h3>
+                        <div style="opacity: 0.9; margin: 10px 0;">📱 Social Media Manager</div>
+                        <small>• Gestión redes<br>• Calendario contenidos<br>• Community management<br>• Engagement</small>
+                    </div>
+                    <div class="team-card">
+                        <h3>Carlos</h3>
+                        <div style="opacity: 0.9; margin: 10px 0;">📈 Analista Digital</div>
+                        <small>• Google Analytics<br>• Meta Ads<br>• Reportes<br>• Optimización</small>
+                    </div>
+                    <div class="team-card">
+                        <h3>Luz</h3>
+                        <div style="opacity: 0.9; margin: 10px 0;">✨ Content Manager</div>
+                        <small>• Creación contenido<br>• Influencers<br>• Storytelling<br>• Producción</small>
+                    </div>
+                    <div class="team-card">
+                        <h3>Milagros</h3>
+                        <div style="opacity: 0.9; margin: 10px 0;">🌐 Web Manager</div>
+                        <small>• Sitio web<br>• SEO y blog<br>• Email marketing<br>• Automatizaciones</small>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3 style="color: #2a5298; margin-bottom: 15px;">⚙️ Herramientas</h3>
+                    <ul style="line-height: 2; margin-left: 20px;">
+                        <li><strong>Metricool</strong> - Gestión redes sociales</li>
+                        <li><strong>Google Analytics 4</strong> - Analítica web</li>
+                        <li><strong>Meta Business Suite</strong> - Facebook + Instagram</li>
+                        <li><strong>Canva Pro Teams</strong> - Diseño colaborativo</li>
+                        <li><strong>Mailchimp/Brevo</strong> - Email marketing</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- REDES SOCIALES -->
+            <div id="redes" class="tab-content">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">📱 Redes Sociales</h2>
+                
+                <div class="stage-header">🎯 AWARENESS (Ene-Mar 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">1.1 Campaña "Vive Natural, Vive San Luis"</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 2,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">👤 Responsables</div>
+                            <div class="detail-value">Luz + George + Hugo</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">📅 Período</div>
+                            <div class="detail-value">01/01 - 31/03/2026</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Calendario con 120 piezas (40/mes)</li>
+                        <li>30 Reels Instagram sobre momentos de consumo</li>
+                        <li>30 TikToks con trends de vida saludable</li>
+                        <li>30 posts educativos en carrusel</li>
+                    </ul>
+                    <strong style="color: #28a745;">📦 Entregable:</strong> 120 piezas + informe de alcance
+                </div>
+                
+                <div class="action-card">
+                    <div class="action-title">1.2 Programa Microinfluencers</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 1,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">👤 Responsables</div>
+                            <div class="detail-value">Luz + George</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">15 influencers</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Identificar 15 microinfluencers (10K-50K)</li>
+                        <li>3 publicaciones por influencer</li>
+                        <li>Hashtags: #BurbujeaNatural #SanLuisSinAzúcar</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">💭 CONSIDERACIÓN (Ene-Mar 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">2.1 Contenido Educativo</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 3,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">60 piezas</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>15 videos comparativos</li>
+                        <li>20 infografías educativas</li>
+                        <li>15 carruseles sobre beneficios</li>
+                        <li>10 videos "Un día con San Luis"</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">🛒 CONVERSIÓN (Ene-Mar 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">3.1 Promociones Digitales</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 5,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">5,000 QR</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Promoción 2x1 con código QR</li>
+                        <li>Alianza Rappi: 20% descuento</li>
+                        <li>Instagram Shopping</li>
+                        <li>Anuncios con CTA "Compra ahora"</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">❤️ FIDELIZACIÓN (Ene-Mar 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">4.1 Club Burbujas</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 2,500</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">3,000 miembros</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Mecánica de puntos por interacciones</li>
+                        <li>Niveles: Bronce, Plata, Oro</li>
+                        <li>Recompensas y descuentos exclusivos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- SITIO WEB -->
+            <div id="web" class="tab-content">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">🌐 Sitio Web</h2>
+                
+                <div class="stage-header">🎯 AWARENESS (Abr-Jun 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">1.1 Optimización SEO</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 2,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">+250% tráfico</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Auditoría SEO completa</li>
+                        <li>Optimizar 15 páginas principales</li>
+                        <li>Mejorar velocidad de carga</li>
+                        <li>Keywords: "agua gasificada sin azúcar Perú"</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">💭 CONSIDERACIÓN (Mar-Jun 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">2.1 Blog de Valor</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 3,500</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">24 artículos</div>
+                        </div>
+                    </div>
+                    <strong>Temas:</strong>
+                    <ul class="actions-list">
+                        <li>"7 beneficios del agua gasificada"</li>
+                        <li>"Cómo leer etiquetas de bebidas"</li>
+                        <li>"Hidratación consciente"</li>
+                        <li>"Recetas saludables con San Luis"</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">🛒 CONVERSIÓN (Mar-Jun 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">3.1 Formularios y CTAs</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 4,000</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">500 conversiones</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>Formularios optimizados</li>
+                        <li>8 CTAs personalizados</li>
+                        <li>Chatbot para consultas</li>
+                        <li>WhatsApp Business</li>
+                    </ul>
+                </div>
+                
+                <div class="action-card">
+                    <div class="action-title">3.2 Recursos Descargables</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 2,500</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">1,500 descargas</div>
+                        </div>
+                    </div>
+                    <strong>Recursos:</strong>
+                    <ul class="actions-list">
+                        <li>"Guía de hidratación saludable"</li>
+                        <li>"30 días de retos"</li>
+                        <li>"Recetario: 20 bebidas creativas"</li>
+                    </ul>
+                </div>
+                
+                <div class="stage-header">❤️ FIDELIZACIÓN (Mar-Jun 2026)</div>
+                
+                <div class="action-card">
+                    <div class="action-title">4.1 Newsletter</div>
+                    <div class="detail-grid">
+                        <div class="detail-item">
+                            <div class="detail-label">💰 Presupuesto</div>
+                            <div class="detail-value budget">S/ 2,500</div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-label">🎯 Meta</div>
+                            <div class="detail-value">8,000 suscriptores</div>
+                        </div>
+                    </div>
+                    <strong>Acciones:</strong>
+                    <ul class="actions-list">
+                        <li>6 newsletters en el trimestre</li>
+                        <li>Segmentación por intereses</li>
+                        <li>Open Rate objetivo: 28%</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- KPIS -->
+            <div id="kpis" class="tab-content">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">📊 KPIs y Métricas</h2>
+                
+                <h3 style="color: #2a5298; margin: 20px 0;">Engagement en Redes</h3>
+                <div class="kpi-grid">
+                    <div class="kpi-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div>Instagram</div>
+                        <div class="kpi-value">5%</div>
+                        <small>Actual: 0.5%</small>
+                    </div>
+                    <div class="kpi-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div>TikTok</div>
+                        <div class="kpi-value">6%</div>
+                        <small>Actual: 0%</small>
+                    </div>
+                    <div class="kpi-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div>Facebook</div>
+                        <div class="kpi-value">3%</div>
+                        <small>Actual: 0.5%</small>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3 style="color: #2a5298; margin-bottom: 15px;">Otras Métricas Clave</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>Alcance</strong><br><span class="budget">+300%</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>Impresiones</strong><br><span class="budget">2M+</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>Seguidores</strong><br><span class="budget">+25K</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>UGC</strong><br><span class="budget">100+</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>Tráfico Web</strong><br><span class="budget">+250%</span>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; text-align: center;">
+                            <strong>Newsletter</strong><br><span class="budget">8,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PRESUPUESTO -->
+            <div id="presupuesto" class="tab-content">
+                <h2 style="color: #2a5298; margin-bottom: 30px;">💰 Presupuesto Total</h2>
+                
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; padding: 40px; border-radius: 15px; text-align: center; margin-bottom: 30px;">
+                    <h3 style="font-size: 1.8em; margin-bottom: 15px;">Inversión Total</h3>
+                    <div style="font-size: 4em; font-weight: 700; margin: 20px 0;">S/ 43,500</div>
+                    <p style="font-size: 1.2em; opacity: 0.9;">Enero - Junio 2026</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+                    <div class="action-card" style="border-left-color: #667eea;">
+                        <h3 style="color: #667eea;">📱 Redes Sociales</h3>
+                        <div class="budget" style="font-size: 2em; margin: 15px 0;">S/ 21,500</div>
+                        <ul style="line-height: 1.8;">
+                            <li>Awareness: S/ 3,500</li>
+                            <li>Consideración: S/ 5,500</li>
+                            <li>Conversión: S/ 7,500</li>
+                            <li>Fidelización: S/ 5,000</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="action-card" style="border-left-color: #2a5298;">
+                        <h3 style="color: #2a5298;">🌐 Sitio Web</h3>
+                        <div class="budget" style="font-size: 2em; margin: 15px 0;">S/ 21,500</div>
+                        <ul style="line-height: 1.8;">
+                            <li>Awareness: S/ 3,500</li>
+                            <li>Consideración: S/ 5,500</li>
+                            <li>Conversión: S/ 7,500</li>
+                            <li>Fidelización: S/ 5,000</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="action-card" style="border-left-color: #28a745;">
+                        <h3 style="color: #28a745;">⚙️ Setup Inicial</h3>
+                        <div class="budget" style="font-size: 2em; margin: 15px 0;">S/ 500</div>
+                        <ul style="line-height: 1.8;">
+                            <li>Google Analytics 4</li>
+                            <li>Meta Business Suite</li>
+                            <li>Metricool</li>
+                            <li>Canva Pro Teams</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="action-card">
+                    <h3 style="color: #2a5298; margin-bottom: 20px;">📅 Cronograma de Desembolsos</h3>
+                    <div style="display: grid; gap: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #667eea;">
+                            <strong>Diciembre 2025</strong> - S/ 500<br>
+                            <small>Configuración inicial de herramientas</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #f5576c;">
+                            <strong>Enero 2026</strong> - S/ 10,000<br>
+                            <small>Lanzamiento campañas redes sociales</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #764ba2;">
+                            <strong>Febrero 2026</strong> - S/ 8,000<br>
+                            <small>Continuación + optimización</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #4facfe;">
+                            <strong>Marzo 2026</strong> - S/ 7,000<br>
+                            <small>Cierre Q1 + preparación web</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #11998e;">
+                            <strong>Abril 2026</strong> - S/ 9,000<br>
+                            <small>Lanzamiento estrategia web + SEO</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #38ef7d;">
+                            <strong>Mayo 2026</strong> - S/ 5,500<br>
+                            <small>Optimización conversiones web</small>
+                        </div>
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #f093fb;">
+                            <strong>Junio 2026</strong> - S/ 3,500<br>
+                            <small>Consolidación + análisis resultados</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="background: #d1ecf1; padding: 25px; border-radius: 10px; border-left: 5px solid #17a2b8; margin-top: 30px;">
+                    <h3 style="color: #0c5460; margin-bottom: 15px;">💡 Recomendaciones Presupuestarias</h3>
+                    <ul style="line-height: 2; margin-left: 20px; color: #0c5460;">
+                        <li><strong>Desembolso mensual promedio:</strong> S/ 7,250</li>
+                        <li><strong>Reserve 10% contingencia:</strong> S/ 4,350</li>
+                        <li><strong>Mida ROI semanalmente</strong> para ajustar inversión</li>
+                        <li><strong>Priorice:</strong> Contenido de calidad + pauta de conversión</li>
+                        <li><strong>Negocie paquetes</strong> con proveedores por volumen</li>
+                    </ul>
+                </div>
+                
+                <div class="action-card" style="margin-top: 30px;">
+                    <h3 style="color: #2a5298; margin-bottom: 20px;">🎯 Alianzas Estratégicas (S/ 2,000 incluido)</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong style="color: #667eea;">💪 Gimnasios</strong>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Gold's Gym</li>
+                                <li>Bodytech</li>
+                                <li>Sportlife</li>
+                                <li>CrossFit boxes (5)</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong style="color: #28a745;">🥗 Tiendas Saludables</strong>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Flora & Fauna</li>
+                                <li>La Sanahoria</li>
+                                <li>Miski</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong style="color: #f5576c;">☕ Restaurantes Healthy</strong>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Quinoa Restaurante</li>
+                                <li>Raw Café</li>
+                                <li>Nanka</li>
+                            </ul>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <strong style="color: #764ba2;">🚚 Delivery</strong>
+                            <ul style="margin: 10px 0 0 20px; line-height: 1.8;">
+                                <li>Rappi (campaña exclusiva)</li>
+                                <li>Cornershop by Uber</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="print-btn" onclick="window.print()">🖨️ Imprimir</button>
+    
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
